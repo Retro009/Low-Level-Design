@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface MenuService {
 
-    List<MenuItem> getMenuItems(String itemType);
+    List<MenuItem> getMenuItems(String itemType) throws Exception;
 }
