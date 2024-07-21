@@ -20,6 +20,6 @@ public class MenuServiceImpl implements MenuService{
             itemType.equals(DietaryRequirement.VEGAN.name())){
             return repository.getByDietaryRequirement(DietaryRequirement.valueOf(itemType));
         }
-        throw new RuntimeException("Dietary Preference not found");
+        throw new RuntimeException("Invalid Dietary Preferrence");
     }
 }
