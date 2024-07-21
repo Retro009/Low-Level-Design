@@ -13,6 +13,8 @@ public class MenuServiceImpl implements MenuService{
     }
     @Override
     public List<MenuItem> getMenuItems(String itemType) throws Exception {
+        if(itemType==null || itemType.isEmpty())
+            return repository.getAll();
         if(itemType.equals(DietaryRequirement.VEG.name()) ||
             itemType.equals(DietaryRequirement.NON_VEG.name()) ||
             itemType.equals(DietaryRequirement.VEGAN.name())){
